@@ -85,7 +85,8 @@ header {
 
 .list {
   height: calc(100vh - 175px);
-  padding-top: 12px;
+  border-top: 12px solid #f3f5f7;
+  box-sizing: border-box;
   overflow: auto;
   background: #f3f5f7;
 }

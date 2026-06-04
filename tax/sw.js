@@ -2,7 +2,7 @@ importScripts(
   "https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox-sw.js"
 );
 
-var cacheStorageKey = "tax-pwa-20260604-20";
+var cacheStorageKey = "tax-pwa-20260605-1";
 var cacheList = [
   "/tax/",
   "/tax/index.html",
