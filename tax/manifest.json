@@ -1,7 +1,7 @@
 {
   "name": "PWA示例",
   "short_name": "PWA示例",
-  "start_url": "/tax",
+  "start_url": "/tax/index.html",
   "display": "fullscreen",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",

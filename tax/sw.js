@@ -2,8 +2,22 @@ importScripts(
   "https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox-sw.js"
 );
 
-var cacheStorageKey = "minimal-pwa-1";
-var cacheList = ["/", "index.html", "index.css", "icon.png"];
+var cacheStorageKey = "tax-pwa-20260604-20";
+var cacheList = [
+  "/tax/",
+  "/tax/index.html",
+  "/tax/detail.html",
+  "/tax/detail-bonus.html",
+  "/tax/calculation.html",
+  "/tax/index.css",
+  "/tax/data.js",
+  "/tax/tax-calculator.js",
+  "/tax/app.js",
+  "/tax/detail.js",
+  "/tax/detail-bonus.js",
+  "/tax/calculation.js",
+  "/tax/logo.png",
+];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(

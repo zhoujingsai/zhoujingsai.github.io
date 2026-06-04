@@ -1,10 +1,25 @@
+html {
+  background: #fff;
+}
+
 body {
   margin: 0;
   font-size: 16px;
   font-weight: 400;
   font-family: PingFangSC-Regular, sans-serif;
   color: #444444;
-  background: #f3f5f7;
+  background: #fff;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: env(safe-area-inset-top);
+  background: #fff;
 }
 
 a {
@@ -21,11 +36,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 14px;
-  padding: 6px 20px 12px 20px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  padding: 7px 20px 14px 20px;
   font-weight: 550;
   background: #fff;
-  box-shadow: 1px 1px 1px #dddddd;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .header-back {
   display: flex;
@@ -46,14 +63,15 @@ header {
 }
 
 .total {
-  padding: 20px;
+  border-top: 14px solid #f3f5f7;
+  padding: 16px 20px 14px 20px;
   background: #fff;
 }
 .total-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 600;
+  font-weight: 700;
 }
 .total-item + .total-item {
   margin-top: 8px;
@@ -66,14 +84,20 @@ header {
 }
 
 .list {
-  height: calc(100vh - 180px);
-  padding-top: 14px;
+  height: calc(100vh - 175px);
+  padding-top: 12px;
   overflow: auto;
+  background: #f3f5f7;
 }
 .list-item {
-  margin-bottom: 14px;
-  padding: 15px 20px 24px 21px;
+  display: block;
+  color: inherit;
+  margin-bottom: 12px;
+  padding: 15px 20px 17px 21px;
   background: #fff;
+}
+.list-item:active {
+  background: #f8f9fb;
 }
 .list-item-header {
   display: flex;
@@ -81,21 +105,273 @@ header {
   align-items: center;
   color: #404040;
   font-size: 18px;
-  font-weight: 550;
-  line-height: 32px;
+  font-weight: 600;
+  line-height: 28px;
 }
 .list-item-header div + div {
   padding-right: 32px;
 }
 .list-item-body {
   position: relative;
-  color: #94939b;
+  color: #9a9faa;
   font-weight: 550;
-  line-height: 30px;
+  margin-top: 2px;
+  line-height: 28px;
 }
 .list-item-body .icon-qianjin {
   position: absolute;
-  top: 27px;
+  top: 25px;
   right: 0;
   color: #d9dde4;
+}
+
+.tips {
+  margin-top: 0;
+  border-top: 14px solid #f3f5f7;
+  padding: 12px 24px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 550;
+  background: #edf7ff;
+  line-height: 24px;
+}
+
+.card {
+  background: #fff;
+}
+
+.section-card {
+  margin-top: 0;
+  border-top: 14px solid #f3f5f7;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 15px 24px;
+  font-size: 17px;
+  font-weight: 700;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.detail-page .card-title {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.card-title-dot {
+  width: 5px;
+  height: 17px;
+  margin-right: 9px;
+  border-radius: 2px;
+  background: #4185f2;
+}
+
+.card-body {
+  padding: 20px 24px 8px 24px;
+  color: #838994;
+}
+
+.detail-card-body {
+  padding: 20px 0 0 0;
+}
+
+.card-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.card-item div:first-child {
+  white-space: nowrap;
+}
+
+.card-item div + div {
+  color: #4a4a4a;
+  font-family: PingFangSC-Medium, sans-serif;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.card-children {
+  margin: 0 0 15px 0;
+  padding: 12px 48px 12px 46px;
+  background: #f6f7f9;
+}
+
+.card-children:empty {
+  display: none;
+}
+
+.card-children-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+  padding-left: 1em;
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.card-children-item:last-child {
+  margin-bottom: 4px;
+}
+
+.card-children-item div + div {
+  color: #111;
+  font-family: PingFangSC-Medium, sans-serif;
+  text-align: right;
+}
+
+.detail-summary .card-item:last-child {
+  justify-content: flex-end;
+  margin-top: -6px;
+  margin-bottom: 0;
+}
+
+.detail-summary .card-item:last-child div:first-child {
+  display: none;
+}
+
+.detail-bonus-page .detail-summary .card-item:last-child {
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.detail-bonus-page .detail-summary .card-item:last-child div:first-child {
+  display: block;
+}
+
+.tax-link {
+  display: inline-flex;
+  align-items: center;
+  color: #4f89fb;
+}
+
+.tax-link .iconfont {
+  color: #4f89fb;
+  font-size: 18px;
+}
+
+.detail-card-body > .card-item {
+  margin: 0;
+  padding: 0 24px 15px 24px;
+}
+
+.detail-card-body .card-item div:first-child {
+  color: #8d929a;
+  white-space: normal;
+}
+
+.detail-card-body .card-item div + div {
+  color: #444;
+  font-size: 17px;
+}
+
+.deduction-toggle {
+  width: 100%;
+  border: 0;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.deduction-toggle div + div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #222;
+  transform: rotate(0deg);
+}
+
+.deduction-toggle:not(.is-open) .triangle {
+  transform: rotate(180deg);
+}
+
+.calculation-tips {
+  margin-top: 0;
+  border-top: 0;
+  border-bottom: 14px solid #f3f5f7;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.calculation-body {
+  padding: 20px 0 0 0;
+}
+
+.bonus-body {
+  padding: 20px 0 0 0;
+}
+
+.calculation-body > .card-item {
+  margin: 0;
+  padding: 0 28px 19px 28px;
+}
+
+.bonus-body > .card-item {
+  margin: 0;
+  padding: 0 24px 19px 24px;
+}
+
+.calculation-body .card-item div:first-child {
+  color: #8d929a;
+  white-space: normal;
+}
+
+.bonus-body .card-item div:first-child {
+  color: #8d929a;
+  white-space: normal;
+}
+
+.calculation-body .card-item div + div {
+  color: #444;
+  font-size: 18px;
+}
+
+.bonus-body .card-item div + div {
+  color: #444;
+  font-size: 17px;
+}
+
+.calculation-toggle {
+  padding: 0 28px 19px 28px;
+}
+
+.strong-row {
+  font-weight: 700;
+}
+
+.strong-row div:first-child,
+.strong-row div + div {
+  color: #222;
+}
+
+.divider-row {
+  margin-top: 4px !important;
+  padding-top: 18px !important;
+  border-top: 1px solid #e7e7e7;
+}
+
+.policy-link {
+  padding: 34px 0 140px 0;
+  background: #f3f5f7;
+  color: #4f89fb;
+  font-size: 17px;
+  text-align: center;
 }

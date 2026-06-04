@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="manifest" href="manifest.json" />
   </head>
-  <body class="detail-page">
+  <body class="detail-page detail-bonus-page">
     <header>
       <a class="header-back" href="index.html" data-back>
         <span class="header-icon iconfont icon-fanhui"></span>
@@ -34,7 +34,6 @@
         <div class="card-title-dot"></div>
         <div>纳税明细信息</div>
       </div>
-
       <div class="card-body detail-summary" data-summary-body></div>
     </div>
 
@@ -44,37 +43,31 @@
         <div>纳税明细-基础情况</div>
       </div>
 
-      <div class="card-body" data-basic-body>
+      <div class="card-body">
         <div class="card-item">
           <div>所得项目小类：</div>
           <div data-subcategory></div>
         </div>
-
         <div class="card-item">
           <div>扣缴义务人名称：</div>
           <div data-company></div>
         </div>
-
         <div class="card-item">
           <div>扣缴义务人纳税人<br />识别号：</div>
           <div data-taxpayer-id></div>
         </div>
-
         <div class="card-item">
           <div>主管税务机关：</div>
           <div data-tax-office></div>
         </div>
-
         <div class="card-item">
           <div>申报渠道：</div>
           <div>其他</div>
         </div>
-
         <div class="card-item">
           <div>申报日期：</div>
           <div data-declaration-date></div>
         </div>
-
         <div class="card-item" style="margin-bottom: 2px">
           <div>税款所属期：</div>
           <div data-period></div>
@@ -82,22 +75,26 @@
       </div>
     </div>
 
-    <div class="tips">
-      温馨提示：专项附加扣除和个人养老金已体现在税款计算过程中，在本期数据中不予显示。您可在“税款计算-累计收入与扣除详情”中查看。
-      <a class="tax-link" data-calc-link>查看税款计算</a>
+    <div class="card section-card">
+      <div class="card-title">
+        <div class="card-title-dot"></div>
+        <div>收入与扣除详情</div>
+      </div>
+      <div class="card-body bonus-body" data-income-body></div>
     </div>
 
     <div class="card section-card">
       <div class="card-title">
         <div class="card-title-dot"></div>
-        <div>本期收入与扣除详情</div>
+        <div>税款计算</div>
       </div>
-
-      <div class="card-body detail-card-body" data-detail-body></div>
+      <div class="card-body bonus-body" data-tax-body></div>
     </div>
+
+    <div class="policy-link">查看政策说明</div>
 
     <script src="data.js"></script>
     <script src="tax-calculator.js"></script>
-    <script src="detail.js"></script>
+    <script src="detail-bonus.js"></script>
   </body>
 </html>

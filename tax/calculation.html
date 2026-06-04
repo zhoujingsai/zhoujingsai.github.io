@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>税款计算</title>
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/c/font_3771354_gxx1tulrykg.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body class="calculation-page">
+    <header>
+      <a class="header-back" href="detail.html" data-back>
+        <span class="header-icon iconfont icon-fanhui"></span>
+        返回
+      </a>
+      <div class="header-title">税款计算</div>
+      <span class="header-shensu"></span>
+    </header>
+
+    <div class="tips calculation-tips">
+      温馨提示：税款计算采用累计计税方式，累计收入与扣除详情数据已包括本期数据。此处数据为扣缴单位为您申报的数据，如有异议，请联系您的单位处理。
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <div class="card-title-dot"></div>
+        <div>累计收入与扣除详情</div>
+      </div>
+
+      <div class="card-body calculation-body" data-cumulative-body></div>
+    </div>
+
+    <div class="card section-card">
+      <div class="card-title">
+        <div class="card-title-dot"></div>
+        <div>税款计算</div>
+      </div>
+
+      <div class="card-body calculation-body" data-tax-body></div>
+    </div>
+
+    <div class="policy-link">查看政策说明</div>
+
+    <script src="data.js"></script>
+    <script src="tax-calculator.js"></script>
+    <script src="calculation.js"></script>
+  </body>
+</html>

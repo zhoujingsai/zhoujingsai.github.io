@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,6 +8,9 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <title>收入纳税明细</title>
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link
       rel="stylesheet"
@@ -16,196 +19,32 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="manifest" href="manifest.json" />
   </head>
-  <body>
+  <body class="index-page">
     <header>
-      <a class="header-back" href="/tax/index2024.html">
+      <a class="header-back" href="#" data-next-year>
         <span class="header-icon iconfont icon-fanhui"></span>
         返回
       </a>
       <div class="header-title">收入纳税明细</div>
-      <a class="header-shensu" href="/tax/detail.html">批量申诉</a>
+      <a class="header-shensu" href="#" data-prev-year>批量申诉</a>
     </header>
 
     <div class="total">
       <div class="total-item">
         <div>收入合计<a class="total-icon iconfont icon-wenhao"></a>：</div>
-        <div>684000.00元</div>
+        <div data-total-income>0.00元</div>
       </div>
 
       <div class="total-item">
         <div>已申报税额合计：</div>
-        <div>82351.70元</div>
+        <div data-total-tax>0.00元</div>
       </div>
     </div>
 
-    <div class="list">
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-12</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：久瓴（上海）智能科技有...</div>
-          <div>收入：60000.00元</div>
-          <div>已申报税额：13332.40元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
+    <div class="list" data-list></div>
 
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-11</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：久瓴（上海）智能科技有...</div>
-          <div>收入：60000.00元</div>
-          <div>已申报税额：11444.10元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-10</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：久瓴（上海）智能科技有...</div>
-          <div>收入：60000.00元</div>
-          <div>已申报税额：11444.10元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-09</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：久瓴（上海）智能科技有...</div>
-          <div>收入：60000.00元</div>
-          <div>已申报税额：10177.10元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-08</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：久瓴（上海）智能科技有...</div>
-          <div>收入：60000.00元</div>
-          <div>已申报税额：9155.30元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-07</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：久瓴（上海）智能科技有...</div>
-          <div>收入：60000.00元</div>
-          <div>已申报税额：9155.30元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-06</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：久瓴（上海）智能科技有...</div>
-          <div>收入：60000.00元</div>
-          <div>已申报税额：8488.20元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-05</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：久瓴（上海）智能科技有...</div>
-          <div>收入：60000.00元</div>
-          <div>已申报税额：4577.60元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-04</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：久瓴（上海）智能科技有...</div>
-          <div>收入：60000.00元</div>
-          <div>已申报税额：4577.60元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-03</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：久瓴（上海）智能科技有...</div>
-          <div>收入：60000.00元</div>
-          <div>已申报税额：2057.60元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-02</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：支付宝（杭州）信息技术...</div>
-          <div>收入：42000.00元</div>
-          <div>已申报税额：2682.39元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-
-      <div class="list-item">
-        <div class="list-item-header">
-          <div>工资薪金</div>
-          <div>2023-01</div>
-        </div>
-        <div class="list-item-body">
-          <div>所得项目小类：正常工资薪金</div>
-          <div>扣缴义务人：支付宝（杭州）信息技术...</div>
-          <div>收入：42000.00元</div>
-          <div>已申报税额：918.07元</div>
-          <span class="iconfont icon-qianjin"></span>
-        </div>
-      </div>
-    </div>
+    <script src="data.js"></script>
+    <script src="tax-calculator.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

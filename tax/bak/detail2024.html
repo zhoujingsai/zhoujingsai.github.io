@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>收入纳税明细详情</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/c/font_3771354_gxx1tulrykg.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="manifest" href="manifest.json" />
+    <style>
+      .tips {
+        margin-top: 14px;
+        padding: 12px 24px;
+        color: #333;
+        font-size: 14px;
+        font-weight: 550;
+        background: #edf7ff;
+      }
+
+      .card {
+        background: #fff;
+      }
+      .card-title {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 12px 24px;
+        font-size: 17px;
+        font-weight: 700;
+        border-bottom: 1px solid #e7e7e7;
+      }
+      .card-title-dot {
+        width: 5px;
+        height: 17px;
+        margin-right: 9px;
+        border-radius: 2px;
+        background: #4185f2;
+      }
+      .card-body {
+        padding: 17px 24px 2px 24px;
+        color: #838994;
+      }
+      .card-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+      .card-item div + div {
+        color: #4a4a4a;
+        font-family: 'PingFangSC-Medium';
+      }
+
+      .card-children {
+        background: #f3f5f7;
+        margin: 0 -48px 0 -24px;
+        padding: 12px 48px 12px 24px;
+      }
+      .card-children-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 26px;
+        padding-left: 1em;
+        font-size: 15px;
+      }
+      .card-children-item div + div {
+        color: #111;
+        font-family: 'PingFangSC-Medium';
+      }
+
+      .triangle-wrap {
+        position: relative;
+        color: #888;
+      }
+      .triangle {
+        position: absolute;
+        top: 1px;
+        right: -18px;
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-bottom: 7px solid #444;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="header-back" href="/tax/index.html">
+        <span class="header-icon iconfont icon-fanhui"></span>
+        返回
+      </a>
+      <div class="header-title">收入纳税明细详情</div>
+      <a class="header-shensu">申诉</a>
+    </header>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-item" style="margin-top: 8px">
+          <div>申报日期：</div>
+          <div>2024-06-18</div>
+        </div>
+
+        <div class="card-item" style="margin-bottom: 2px">
+          <div>税款所属期：</div>
+          <div>2024-05</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tips">
+      温馨提示：专向附加扣除已体现在税款计算过程中，在本期数据中不予显示。您可在“税款计算-累计收入与扣除详情-累计专项附加扣除”中查看。
+      <a>查看税款计算</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <div class="card-title-dot"></div>
+        <div>本期收入与扣除详情</div>
+      </div>
+
+      <div class="card-body" style="padding-right: 48px">
+        <div class="card-item">
+          <div>本期收入：</div>
+          <div>60000.00元</div>
+        </div>
+
+        <div class="card-item">
+          <div>本期免税收入：</div>
+          <div>0.00元</div>
+        </div>
+
+        <div class="card-item">
+          <div>本期减除费用：</div>
+          <div>6000.00元</div>
+        </div>
+
+        <div class="card-item">
+          <div>本期专项扣除：</div>
+          <div class="triangle-wrap">
+            <div style="color: #646464;">8223.50元</div>
+            <div class="triangle"></div>
+          </div>
+        </div>
+
+        <div class="card-children">
+          <div class="card-children-item" style="margin-top: 2px">
+            <div>基本养老保险：</div>
+            <div>2923.90元</div>
+          </div>
+
+          <div class="card-children-item">
+            <div>基本医疗保险：</div>
+            <div>731.00元</div>
+          </div>
+
+          <div class="card-children-item">
+            <div>失业保险：</div>
+            <div>182.70元</div>
+          </div>
+
+          <div class="card-children-item" style="margin-bottom: 4px">
+            <div>住房公积金：</div>
+            <div>4385.90元</div>
+          </div>
+        </div>
+
+        <div class="card-item" style="margin-top: 17px">
+          <div>本期其他扣除：</div>
+          <div>0.00元</div>
+        </div>
+
+        <div class="card-item">
+          <div style="width: 10em">本期准予扣除的捐赠项目：</div>
+          <div>0.00元</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
