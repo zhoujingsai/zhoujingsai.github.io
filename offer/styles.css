@@ -1,0 +1,426 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: #f6f7f9;
+  color: #09090b;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.index-page {
+  min-height: 100svh;
+  padding: 20px 16px;
+  background: #f6f7f9;
+}
+
+.index-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.index-title {
+  margin: 10px 0 22px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.offer-list {
+  display: grid;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.offer-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  min-height: 72px;
+  padding: 15px 16px;
+  color: #111827;
+  text-decoration: none;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.offer-row:last-child {
+  border-bottom: 0;
+}
+
+.offer-row:active {
+  background: #f9fafb;
+}
+
+.offer-row strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.offer-row span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.offer-row em {
+  color: #9ca3af;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 2px;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+}
+
+.btn.glass {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.55);
+  color: #09090b;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(24px);
+}
+
+.offer-underline {
+  font-weight: 700;
+  white-space: pre;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+.hungry-page,
+.tokens-page {
+  min-height: 100svh;
+  background: #fff;
+}
+
+.hungry-article {
+  margin: 0 auto;
+  background: #fff;
+  color: #020617;
+}
+
+.hungry-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 100px;
+  padding: 0 20px;
+  background: #090909;
+  color: #fff;
+}
+
+.hungry-top img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hungry-slogan {
+  text-align: right;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.hungry-content {
+  padding: 32px 20px;
+}
+
+.hungry-content > h1 {
+  margin: 0 0 40px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.offer-letter {
+  color: #17191f;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.95;
+  letter-spacing: 0;
+}
+
+.offer-letter p {
+  margin: 0 0 18px;
+}
+
+.offer-letter section {
+  margin-top: 34px;
+}
+
+.offer-letter h2 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.offer-letter ol {
+  margin: 0;
+  padding-left: 1.35em;
+}
+
+.offer-letter li {
+  margin: 6px 0;
+  padding-left: 0.15em;
+}
+
+.hungry-letter {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.82;
+}
+
+.hungry-letter h2 {
+  margin-bottom: 14px;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.hungry-letter ol {
+  margin: 0;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.hungry-letter li {
+  margin: 8px 0;
+  padding-left: 0;
+  font-weight: 400;
+}
+
+.hungry-letter p {
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+.hungry-letter .offer-underline {
+  font-weight: 400;
+}
+
+.hungry-numbered-list {
+  display: grid;
+  gap: 8px;
+  padding-left: 0;
+}
+
+.hungry-numbered-list p {
+  display: grid;
+  grid-template-columns: 1.35em 1fr;
+  gap: 0;
+  margin: 0;
+}
+
+.hungry-numbered-list span {
+  font-weight: 400;
+}
+
+.hungry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.tokens-article {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 20px 40px;
+}
+
+.tokens-sf-letter {
+  color: #080808;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.86;
+  letter-spacing: 0;
+}
+
+.tokens-title {
+  margin: 2px 0 32px;
+  text-align: center;
+}
+
+.tokens-title img {
+  display: block;
+  width: 104px;
+  height: auto;
+  margin: 0 auto 16px;
+}
+
+.tokens-title p {
+  margin: 0 0 10px;
+  color: #455cff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.tokens-title h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.tokens-sf-letter h2 {
+  margin: 30px 0 10px;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.tokens-sf-letter p {
+  margin: 0 0 13px;
+}
+
+.tokens-comp-lines {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 18px 1.35em;
+}
+
+.tokens-comp-lines p {
+  margin: 0;
+  text-indent: 0;
+}
+
+.tokens-comp-lines p > span:first-child {
+  font-weight: 500;
+}
+
+.tokens-sf-letter ol {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+.tokens-sf-letter li {
+  margin: 8px 0;
+}
+
+.tokens-actions {
+  display: flex;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.tokens-actions a {
+  color: #455cff;
+  font-size: 0.95em;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.muted {
+  color: rgba(0, 0, 0, 0.62);
+  font-size: 0.92em;
+}
+
+@media (min-width: 640px) {
+  .hungry-top {
+    padding: 0 36px;
+  }
+
+  .hungry-slogan {
+    font-size: 16px;
+  }
+
+  .hungry-content {
+    padding: 48px;
+  }
+
+  .tokens-article {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .offer-letter {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .offer-letter section {
+    margin-top: 28px;
+  }
+
+  .hungry-letter {
+    font-size: 15px;
+    line-height: 1.78;
+  }
+
+  .hungry-letter h2 {
+    font-size: 20px;
+  }
+
+  .tokens-sf-letter {
+    font-size: 16px;
+    line-height: 1.86;
+  }
+
+  .tokens-title {
+    margin: 0 0 30px;
+  }
+
+  .tokens-title img {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+
+  .tokens-title h1 {
+    font-size: 24px;
+  }
+
+  .tokens-title p {
+    font-size: 12px;
+  }
+
+  .tokens-sf-letter h2 {
+    font-size: 18px;
+  }
+}
